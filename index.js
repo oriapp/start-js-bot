@@ -59,6 +59,20 @@ client.on ("message", (message) => {
         message.reply ("Hey! here ").then(d_msg => { d_msg.delete(3000); });
     }
 
+    if (msg.startsWith(prefix + "myprofile")) {
+    message.reply(message.author.displayAvatarURL);
+    }
+    
+    
+    
+    if (msg.startsWith(prefix + "msginfo")) {
+    message.channel.send ("message: " + message);
+    message.channel.send ("message sender: " + message.author.username);
+    message.channel.send ("message sender ID: " + message.author.id);
+    message.channel.send("`message sender created at:` " + message.author.createdAt);
+    message.channel.send("message: " + message.author.displayAvatarURL);
+    }
+    
     ///Test Embed Message
     if (msg.includes (prefix + "embed")) {
         embed = new discord.RichEmbed ()
