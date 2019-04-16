@@ -4,7 +4,7 @@ var client = new discord.Client();
 
 const token = "Your-TOKEN-Here";
 
-function catcErr (err, meesage) {
+function catchErr (err, meesage) {
     client.user.get("Your-ID-Here").send ("here was an error at channel " + message.channel + "in guild " + message.guild);
     client.user.get("Your-ID-Here").send ("ERROR ```" + err + "```");
 }
